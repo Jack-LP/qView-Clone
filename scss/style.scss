@@ -1,0 +1,281 @@
+@import "variables";
+@import "mixins";
+
+*{
+    @include reset-body;
+}
+
+body{
+    background-color: $bodyColor;
+    color: $textColorLight;
+    font-family: $bodyFont;
+}
+
+.container{
+    max-width: 1344px;
+    margin: 0 auto;
+}
+
+.firstSection{
+    background-image: linear-gradient(rgba(21, 21, 21, 0.7), rgba(21, 21, 21, 0.7)), url(/img/rainbg.jpg);
+    background-attachment: fixed;
+    background-position: 50% 50%;
+    background-size: cover;
+    height: 100vh;
+    box-shadow: 0em .1em 1em #000;
+    nav{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 30px;
+        padding: 15px 0;
+        font-size: $fontMedium;
+        .navbar{
+            width: 100%;
+            ul{
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                gap: 30px;
+                li{
+                    &:last-of-type{
+                        margin-left: auto;
+                    }
+                    @include reset-list;
+                    a{
+                        @include reset-list;
+                        color: inherit;
+                        &:visited{
+                            color: inherit;
+                        }
+                        &:hover{
+                            transition: .2s;
+                            color: $linkColor;
+                        }
+                    }
+                }
+            }
+        }
+        .logoSection{
+            font-size: $fontLogo;
+            a{
+                @include reset-list;
+                color: inherit;
+                &:visited{
+                    color: inherit;
+                }
+                &:hover{
+                    transition: .2s;
+                    color: $linkColor;
+                }
+            }
+        }
+    }
+    .firstContent{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-top: 40px;
+        h1{
+            font-family: $titleFont;
+            font-weight: 300;
+            font-size: $fontMediumPlus;
+            padding: 5px 0;
+            span{
+                font-weight: 400;
+            }
+        }
+        h2{
+            font-family: $titleFont;
+            font-weight: 400;
+            font-size: $fontLogo;
+            padding: 5px 0;
+        }
+        button{
+            @include button;
+            margin: 1rem 0;
+        }
+        img{
+            width: auto;
+            height: 700px;
+            padding-bottom: 50px;
+        }
+    }
+}
+
+.secondSection{
+    .container{
+        padding-top: 40px;
+        .containerGrid{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: 100%;
+            column-gap: 15px;
+            grid-template-areas: 
+            "firstCol secondCol";
+            .firstCol{
+                grid-area: firstCol;
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                h2{
+                    font-family: $titleFont;
+                    font-weight: 300;
+                    font-size: $fontLargePlus;
+                }
+                p{
+                    font-size: $fontMedium;
+                    font-weight: 400;
+                }
+            }
+            .secondCol{
+                grid-area: secondCol;
+                img{
+                    width: auto;
+                    height: 579px;
+                }
+            }
+        }
+    }
+}
+
+.thirdSection{
+    background-color: $bodyColorDark;
+    box-shadow: 0em -.1em 1em #000;
+    .container{
+        padding-top: 40px;
+        .containerGrid{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: 100%;
+            column-gap: 15px;
+            grid-template-areas: 
+            "secondCol firstCol";
+            .firstCol{
+                grid-area: firstCol;
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                h2{
+                    font-family: $titleFont;
+                    font-weight: 300;
+                    font-size: $fontLargePlus;
+                }
+                p{
+                    font-size: $fontMedium;
+                    font-weight: 400;
+                }
+            }
+            .secondCol{
+                grid-area: secondCol;
+                video{
+                    width: auto;
+                    height: 590px;
+                }
+            }
+        }
+    }
+}
+
+.fourthSection{
+    .container{
+        padding-top: 40px;
+        .containerGrid{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: 100%;
+            column-gap: 15px;
+            grid-template-areas: 
+            "firstCol secondCol";
+            .firstCol{
+                grid-area: firstCol;
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                h2{
+                    font-family: $titleFont;
+                    font-weight: 300;
+                    font-size: $fontLargePlus;
+                }
+                p{
+                    font-size: $fontMedium;
+                    font-weight: 400;
+                }
+            }
+            .secondCol{
+                grid-area: secondCol;
+                img{
+                    width: auto;
+                    height: 579px;
+                }
+            }
+        }
+    }
+}
+
+footer{
+    box-shadow: 0em -.1em 1em #000;
+    background-color: $bodyColorDark;
+    .container{
+        .containerGridFooter{
+            padding-top: 40px;
+            display: grid;
+            grid-template-columns: 100%;
+            grid-template-rows: 1fr .5fr .25fr;
+            gap: 20px;
+            .cards{
+                display: flex;
+                justify-content: space-between;
+                gap: 30px;
+                .card{
+                    @include card;
+                }
+            }
+            .footerButton{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                button{
+                    @include button;
+                }
+            }
+            .legal{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding-top: 30px;
+                font-size: $fontSmall;
+                color: $textColorDark;
+            }
+        }
+    }
+}
+
+// MEDIA QUERIES
+
+@media only screen and (max-width: 1400px) {
+    .container{
+        max-width: 1100px;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .container{
+        max-width: 1000px;
+    }
+}
+
+@media only screen and (max-width: 1150px) {
+    .container{
+        max-width: 1000px;
+        .containerGrid{
+            grid-template-columns: 100%;
+            grid-template-rows: repeat(2, 1fr);
+            column-gap: 0;
+            grid-template-areas: 
+            "firstCol"
+            "secondCol";
+        }
+    }
+}

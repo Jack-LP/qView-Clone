@@ -1,0 +1,45 @@
+@mixin reset-body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@mixin reset-list{
+    list-style: none;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+}
+
+@mixin button{
+    outline: none;
+    background-color: transparent;
+    color: $textColorLight;
+    border: none;
+    padding: 15px 90px;
+    font-family: $titleFont;
+    font-weight: 300;
+    font-size: $fontLarge;
+    border: solid 1px white;
+    border-radius: 10px;
+    cursor: pointer;
+    &:hover{
+        transition: .2s;
+        background-color: #fff;
+        color: #000;
+    }
+}
+
+@mixin card{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    h2{
+        font-family: $titleFont;
+        font-weight: 300;
+        font-size: $fontMediumPlus;
+    }
+    p{
+        font-size: $fontMedium;
+    }
+}

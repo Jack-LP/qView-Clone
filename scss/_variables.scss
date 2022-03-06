@@ -1,0 +1,25 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:100,100italic,300,300italic,regular,italic,700,700italic,900,900italic);
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,regular,500,600,700,800,300italic,italic,500italic,600italic,700italic,800italic);
+
+// Font
+
+$bodyFont: "Open Sans", sans-serif;
+$titleFont: "Lato", sans-serif;
+
+// Color
+
+$bodyColor: #292929;
+$bodyColorDark: #212121;
+$textColorLight: #fff;
+$textColorDark: #525252;
+$linkColor: #3273dc;
+
+// Font sizes
+
+$fontSmall: .8em;
+$fontMedium: 1em;
+$fontMediumPlus: 2rem;
+$fontLogo: 1.25rem;
+$fontLarge: 2.25rem;
+$fontLargePlus: 2.5rem;
